@@ -1,0 +1,15 @@
+# Example usage of the CnfAttributesMacro
+Transform:
+  - CnfAttributesMacro
+
+Resources:
+  Bucket01:
+    Type: AWS::S3::Bucket
+  Bucket02:
+    Type: AWS::S3::Bucket
+    Properties:
+      Tags:
+        - Key: Project
+          Value: 0123 macro demo
+        - Key: CostCenter
+          Value: 0123 987 654
